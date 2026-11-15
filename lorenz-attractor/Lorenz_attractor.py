@@ -126,7 +126,7 @@ if __name__ == "__main__" :
     #parameters = np.array([sigma, beta, rho])
 
 
-    step1 = 0.01
+    step1 = 0.0001
     parameters1 = np.array([10, 8/3, 28],dtype=float) 
     state1 = np.array([1,1,1],dtype=float) 
     trajectory1 = simulate(state1, parameters1, step1, step_number(step1))
@@ -139,18 +139,18 @@ if __name__ == "__main__" :
 
 
     step3 = step1
-    parameters3 = np.array([11, 8/3, 28],dtype=float)
+    parameters3 = np.array([10, 8/3, 215],dtype=float)
     state3 = np.array([1,1,1],dtype=float)
     trajectory3 = simulate(state3, parameters3, step3, step_number(step3))
 
     ploter1(trajectory3,state3,parameters3, step3, "hot")
-    ploter_2D(trajectory3, parameters3, step3)
+    #ploter_2D(trajectory3, parameters3, step3)
 
     #ploter1(trajectory2,state2,parameters2, step2, "inferno")
     #ploter_2D(trajectory2, parameters2, step2)
 
     ploter1(trajectory1, state1, parameters1, step1, "viridis")
-    ploter_2D(trajectory1, parameters1, step1)
+    #ploter_2D(trajectory1, parameters1, step1)
     
 
     ploter2(trajectory1, trajectory3, state1, state3, parameters1, parameters3)
